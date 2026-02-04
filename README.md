@@ -1,10 +1,10 @@
-# 🛰️ Meshtastic Puglia Gateway (Brindisi)
+# Meshtastic alert system bot (Brindisi JN80XP)
 
 [![Python Version](https://img.shields.io/badge/python-3.8%2B-blue.svg)](https://www.python.org/)
 [![Meshtastic](https://img.shields.io/badge/mesh-Meshtastic-green.svg)](https://meshtastic.org/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-Uno script Python avanzato per integrare i nodi **Meshtastic** con servizi di monitoraggio ambientale e sismico in tempo reale. Progettato specificamente per la zona di **Brindisi**, gestisce allerte critiche e risponde a comandi interattivi direttamente sulla rete LoRa.
+Uno script Python avanzato per integrare i nodi **LoraItalia** con servizi di monitoraggio ambientale e sismico in tempo reale. Progettato specificamente per la zona di **Brindisi**, gestisce allerte critiche e risponde a comandi interattivi direttamente sulla rete LoRa.
 
 ---
 
@@ -51,7 +51,7 @@ This Python script turns a Meshtastic node into an automated information gateway
 
 ---
 
-## 🚀 Requisiti e Installazione / Installation
+## Requisiti e Installazione / Installation
 
 ### Requirements
 * Python 3.8+
@@ -71,6 +71,21 @@ This Python script turns a Meshtastic node into an automated information gateway
 3. Avvia lo script:
    ```bash
    nohup python3 mesh-bot-alerts.py &
+
+## Personalizzazione Località / Localization
+
+Lo script è preconfigurato per la città di **Brindisi**. Per cambiare la località del monitoraggio meteo, è necessario modificare le coordinate (Latitudine e Longitudine) all'interno delle funzioni dello script.
+
+### 1. Trovare le coordinate
+Puoi trovare le coordinate della tua città su Google Maps o tramite servizi come [LatLong.net](https://www.latlong.net/).
+
+### 2. Modifica del Codice
+Apri il file `mesh-bot-alerts.py` e cerca l'URL all'interno della funzione `get_weather_report()`:
+
+```python
+# Esempio per Brindisi: latitude=40.63&longitude=17.93
+url = "[https://api.open-meteo.com/v1/forecast?latitude=XX.XX&longitude=YY.YY&current=](https://api.open-meteo.com/v1/forecast?latitude=XX.XX&longitude=YY.YY&current=)..."
+
 
 ## ⚠️ Disclaimer
 Questo software è a scopo sperimentale. Non deve essere considerato un sistema di allertamento ufficiale. Fare sempre riferimento ai canali della Protezione Civile per la sicurezza personale. This software is for experimental purposes only. It is not an official emergency alert system. Always refer to official government channels for safety.
