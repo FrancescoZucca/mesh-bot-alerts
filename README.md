@@ -12,7 +12,7 @@ Uno script Python avanzato per integrare i nodi **LoraItalia** con servizi di mo
 
 Il gateway monitora le API dell'**INGV** e di **Open-Meteo**, fungendo da nodo informativo automatico. In caso di eventi avversi, invia notifiche sul canale Mesh per avvisare gli utenti locali.
 
-### 🛠️ Logica di Funzionamento
+### Logica di Funzionamento
 * **Monitoraggio Sismico:** Controllo eventi INGV con Magnitudo > 3.0.
 * **Standard Protezione Civile:** Allerte vento basate sulle soglie ufficiali (Gialla/Arancione/Rossa).
 * **Analisi Propagazione:** Stima della qualità del segnale radio 868MHz basata su parametri troposferici.
@@ -32,14 +32,14 @@ Il gateway monitora le API dell'**INGV** e di **Open-Meteo**, fungendo da nodo i
 
 This script provides real-time monitoring of **INGV** seismic data and **Open-Meteo** weather services. It features an automated alert system and interactive radio propagation analysis.
 
-### 🛠️ Key Features
+### Key Features
 * **Seismic & Wind Monitoring:** Automated alerts based on magnitude and wind speed.
 * **Radio Propagation:** Estimates 868MHz signal enhancement (Tropospheric Ducting).
 * **Bandwidth Management:** Built-in "Flood Control" to respect LoRa limits.
 
 ---
 
-## 🚀 Requisiti e Installazione / Installation
+## Requisiti e Installazione / Installation
 
 ### Requirements
 * Python 3.8+
@@ -50,14 +50,17 @@ This script provides real-time monitoring of **INGV** seismic data and **Open-Me
 1. **Clona la repository:**
 ```bash
 git clone https://github.com/Mantisworks/mesh-bot-alerts.git
+```
 
 2. **Configura la porta seriale in mesh-bot-alerts.py:**
 ```python
 SERIAL_PORT = "/dev/ttyUSB0"
+```
 
 3. **Avvia lo script:**
 ```bash
 nohup python3 mesh-bot-alerts.py &
+```
 
 ---
 
