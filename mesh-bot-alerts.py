@@ -11,12 +11,12 @@ from pubsub import pub
 from datetime import datetime
 
 # --- CONFIG ---
-SERIAL_PORT = "/dev/ttyUSB0"
-CH_INDEX = 1
-CITY = "Brindisi"
-REGION = "Puglia"
-LATITUDE = 40.63
-LONGITUDE = 17.93
+SERIAL_PORT = "/dev/ttyUSB0" # PATH della porta seriale dove è collegato il nodo
+CH_INDEX = 1 # Canale mesh dove inviare gli alert (0 = Primario)
+CITY = "Brindisi" # Città
+REGION = "Puglia" # Regione
+LATITUDE = 40.63 # Latitudie (Utile per estrapolare da internet informazioni meteo)
+LONGITUDE = 17.93 # Longitudine (Utile per estrapolare da internet informazioni meteo)
 
 
 interface = None
