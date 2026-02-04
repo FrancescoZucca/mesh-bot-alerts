@@ -64,7 +64,7 @@ This Python script turns a Meshtastic node into an automated information gateway
 ### Setup
 1. Clona la repository:
    ```bash
-   git clone [https://github.com/Mantisworks/meshtastic-puglia-gateway.git](https://github.com/Mantisworks/meshtastic-puglia-gateway.git)
+   git clone https://github.com/Mantisworks/mesh-bot-alerts.git
 2. Configura la porta seriale nel file main.py:
    ```bash
    SERIAL_PORT = "/dev/ttyUSB0"  # Cambia in base al tuo sistema
@@ -84,4 +84,4 @@ Apri il file `mesh-bot-alerts.py` e cerca l'URL all'interno della funzione `get_
 
 ```python
 # Esempio per Brindisi: latitude=40.63&longitude=17.93
-url = "[https://api.open-meteo.com/v1/forecast?latitude=XX.XX&longitude=YY.YY&current=](https://api.open-meteo.com/v1/forecast?latitude=XX.XX&longitude=YY.YY&current=)..."
+url = "https://api.open-meteo.com/v1/forecast?latitude=40.63&longitude=17.93&current=temperature_2m,relative_humidity_2m,weather_code,surface_pressure,wind_speed_10m,wind_gusts_10m"
